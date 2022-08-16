@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Higher - Lower) Difference Can't be greater then 65500"
+        android:textAllCaps="false"
+        android:textColor="#F44336"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/higher_limit_edtxt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/lower_limit_edtxt"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/lowerLimit_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Lower Limit"
+        android:layout_marginStart="5dp"
+
+        android:textColor="#9C27B0"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/lower_limit_edtxt"
+        app:layout_constraintStart_toStartOf="@+id/lower_limit_edtxt" />
+
+    <EditText
+        android:id="@+id/lower_limit_edtxt"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Here"
+        android:textSize="15dp"
+
+        android:inputType="numberPassword"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/higherLimit_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="5dp"
+        android:text="Higher Limit"
+        android:textColor="#2196F3"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/higher_limit_edtxt"
+        app:layout_constraintStart_toStartOf="@+id/higher_limit_edtxt" />
+
+    <EditText
+        android:id="@+id/higher_limit_edtxt"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Here"
+        android:textSize="15dp"
+
+        android:inputType="numberPassword"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--TextView
+        android:id="@+id/ignoreVal_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Ignore Digits"
+        android:textColor="#2196F3"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ignoreVal_edtxt"
+        app:layout_constraintEnd_toEndOf="@+id/ignoreVal_edtxt"
+        app:layout_constraintStart_toStartOf="@+id/ignoreVal_edtxt" />
+
+    <EditText
+        android:id="@+id/ignoreVal_edtxt"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Here"
+        android:inputType="numberPassword"
+        android:textSize="15dp"
+
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/higher_limit_edtxt" /-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="2dp"
+        android:layout_height="55dp"
+        android:background="#9C27B0"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/lower_limit_edtxt"
+        app:layout_constraintEnd_toStartOf="@+id/higher_limit_edtxt"
+        app:layout_constraintStart_toEndOf="@+id/lower_limit_edtxt"
+        app:layout_constraintTop_toTopOf="@+id/lowerLimit_heading" />
+
+
+    <TextView
+        android:id="@+id/fileName_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="File Name"
+        android:textColor="#4CAF50"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fileName_edtxt"
+        app:layout_constraintStart_toStartOf="@+id/fileName_edtxt" />
+
+    <TextView
+        android:id="@+id/fileName_extention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=".xls"
+        android:textColor="#4CAF50"
+        android:layout_marginStart="5dp"
+        android:textSize="19.5dp"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fileName_edtxt"
+        app:layout_constraintStart_toEndOf="@+id/fileName_edtxt"
+       />
+
+    <EditText
+        android:id="@+id/fileName_edtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="60dp"
+        android:hint="Enter Here"
+        android:inputType="textPassword"
+        android:textAllCaps="true"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lower_limit_edtxt" />
+
+
+
+    <TextView
+        android:id="@+id/generatedPin_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00000"
+        android:textColor="#FF5722"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintVertical_bias="0.51"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/SerialName_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="Serial No"
+        android:textColor="#F44336"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/serial_FirstPart_spinner"
+        app:layout_constraintStart_toStartOf="@+id/serial_FirstPart_spinner" />
+
+
+    <Spinner
+        android:id="@+id/serial_FirstPart_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/generatedPin_Txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openFolder_imageButton" />
+
+
+    <Spinner
+        android:id="@+id/serial_SecondPart_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@android:drawable/btn_dropdown"
+
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/generatedPin_Txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@+id/serial_FirstPart_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/openFolder_imageButton" />
+
+    <Spinner
+        android:id="@+id/serial_ThirdPart_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@android:drawable/btn_dropdown"
+
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/generatedPin_Txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.55"
+        app:layout_constraintStart_toEndOf="@+id/serial_SecondPart_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/openFolder_imageButton" />
+
+
+    <!--Button
+        android:id="@+id/generatePin_Button"
+        android:textSize="18dp"
+        android:text="Generate Pin"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:backgroundTint="#FF9800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generatedPin_Txt" /-->
+
+
+    <Button
+        android:id="@+id/generate_all_pin_low_to_high___Download_xl_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#2196F3"
+        android:text="Download in excel sheet"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/saveDeleteButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="7.5dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generatedPin_Txt">
+
+        <Button
+            android:id="@+id/generatePin_Button"
+            android:layout_width="0dp"
+            android:layout_weight="0.65"
+            android:layout_marginEnd="5dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#4CAF50"
+            android:text="Generate Pin"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:id="@+id/delete__DB_or_Session__Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="#E91E63"
+            android:text="Delete\nThis Session"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.84"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/generatePin_Button" />
+
+    </LinearLayout>
+
+
+    <!--Button
+        android:id="@+id/generatePin_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Generate Pin"
+        android:textSize="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generatedPin_Txt" />
+
+    <Button
+        android:id="@+id/delete__DB_or_Session__Button"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:backgroundTint="#E91E63"
+        android:text="Delete\nThis Session"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/generatePin_Button" /-->
+
+    <TextView
+        android:id="@+id/download_all_pin_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7.5dp"
+        android:text="Generate All Pin (Low To High Limit)"
+        android:textColor="#2196F3"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/generate_all_pin_low_to_high___Download_xl_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/getPermission_button"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.5dp"
+        android:text="get Permission"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveDeleteButtonLayout" />
+
+
+    <ImageView
+        android:id="@+id/led_pic"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/led_off"
+        app:layout_constraintBottom_toBottomOf="@+id/download_all_pin_heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toEndOf="@+id/download_all_pin_heading"
+        app:layout_constraintTop_toTopOf="@+id/download_all_pin_heading" />
+
+
+    <TextView
+        android:id="@+id/ledName_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="done"
+        android:textColor="@color/black"
+        android:textSize="9dp"
+        android:layout_marginTop="1dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/led_pic"
+        app:layout_constraintStart_toEndOf="@+id/led_pic"
+        app:layout_constraintStart_toStartOf="@+id/led_pic"
+        app:layout_constraintTop_toBottomOf="@+id/led_pic" />
+
+
+    <Switch
+        android:id="@+id/uniquePin_Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unique Pin in\n Every Session"
+        android:theme="@style/SCBSwitch"
+        android:layout_marginStart="10dp"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/download_all_pin_heading"
+        app:layout_constraintStart_toStartOf="@+id/saveDeleteButtonLayout"
+        app:layout_constraintTop_toBottomOf="@+id/getPermission_button" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout325"
+        android:layout_width="2dp"
+        android:layout_height="60dp"
+        android:background="#3F51B5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/uniquePin_Switch"
+        app:layout_constraintEnd_toStartOf="@+id/generateHex_Switch"
+        app:layout_constraintStart_toEndOf="@+id/uniquePin_Switch"
+        app:layout_constraintTop_toTopOf="@+id/uniquePin_Switch" />
+
+    <TextView
+        android:id="@+id/encoding_Formula_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Formula (Pin + 43)"
+        android:textAllCaps="false"
+        app:layout_constraintHorizontal_bias="0.05"
+        android:textColor="#F44336"
+        android:visibility="invisible"
+        android:layout_marginBottom="2dp"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/generateHex_Switch"
+        app:layout_constraintEnd_toEndOf="@+id/generateHex_Switch"
+        app:layout_constraintStart_toStartOf="@+id/generateHex_Switch" />
+
+    <Switch
+        android:id="@+id/generateHex_Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Hex\nFor Every Pin"
+        android:theme="@style/SCBSwitch"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/download_all_pin_heading"
+        app:layout_constraintEnd_toEndOf="@+id/saveDeleteButtonLayout"
+        app:layout_constraintTop_toBottomOf="@+id/getPermission_button" />
+
+    <ImageView
+        android:id="@+id/openFolder_imageButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintHorizontal_bias="0.15"
+        android:backgroundTint="#FFC107"
+        android:src="@drawable/ic_folder_open"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fileName_edtxt" />
+
+    <TextView
+        android:id="@+id/mainFolderPath_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open folder"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/openFolder_imageButton"
+        app:layout_constraintStart_toEndOf="@+id/openFolder_imageButton"
+        app:layout_constraintTop_toTopOf="@+id/openFolder_imageButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
